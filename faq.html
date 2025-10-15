@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+
+     <!-- daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    
+
+    <!-- tailwindcss custom -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-btn-primary: #B4F461;
+        --color-background: #F9F7F3;
+        --color-dark: rgba(17,17,17,0.7);
+        --color-dark02: rgba(17, 17, 17, 0.05);
+      }
+     </style>
+
+    
+     <!-- <script>
+        tailwind.config = {
+            theme: {
+               extend: {
+                   colors: {
+                       clifford: "#da373d",
+                       'btn-primary': '#B4F461',
+                       'background': '#F9F7F3',
+                       'dark': 'rgba(17,17,17,0.7)',
+                       'dark-02': 'rgba(17, 17, 17, 0.05)',
+                       'dark-04': '#212121',
+                       'white-02': '#E9E9E9',
+                   },
+               },
+           },
+          plugins: [daisyui], // 👈 enable daisyUI
+       };
+     </script>
+      -->
+
+     
+     <!-- lexend font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+      <style>
+      .lexend-regular {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+      </style>
+</head>
+
+<body class="lexend-regular ">
+    <header id="header-conatiner" class="fixed top-0 left-0 w-full z-50 transition-all duration-200">
+        <!-- navbar start -->
+         <div id="nav-container" class="navbar bg-background shadow-sm px-4 md:px-20 lg:px-76 py-8 flex flex-col md:flex-row justify-center items-center">
+
+            <!-- left -->
+            <div class="navbar-start flex justify-center md:justify-start order-2 md:order-1 mt-5 md:mt-0">
+                <button id="btnHome" data-type="btn-home" class="btn bg-btn-primary px-8 font-semibold text-xl">Home</button>
+            </div>
+
+            <!-- center -->
+            <div class="navbar-center flex items-center order-1 md:order-2">
+                <a href=""><img src="/assets/logo.png" alt=""></a>
+                <a class="btn btn-ghost text-xl font-semibold">Donate Bangladesh</a>
+            </div>
+
+            <!-- right -->
+            <div class="navbar-end flex justify-center gap-2 md:justify-end order-1 md:order-3">
+                <img src="/assets/coin.png" alt="">
+                <p class="text-dark">5500 BDT</p>
+            </div>
+         </div>
+        <!-- navbar end -->
+    </header>
+
+    <main class="pt-[200px] container mx-auto mb-10 lg:mb-20 min-h-screen ">
+        <h1 class="text-4xl font-extrabold mb-10 text-center lg:text-left md:text-left pt-10 px-6">Important FAQ</h1>
+        <!-- faq container -->
+         <div class="join join-vertical bg-base-100 px-6">
+          <!-- faq-1 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title font-semibold">What is the Document Object Model(DOM)?</div>
+            <div class="collapse-content text-sm">Document Object Model(DOM) refers to a programming interface by which scripts are allowed to access and update the content, structure, and style of a web document. It is done most commonly with JavaScript.</div>
+          </div>
+          <!-- faq-2 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title font-semibold">How do you select an element from the DOM?</div>
+            <div class="collapse-content text-sm">There are several methods in javascript to select an element from the DOM. Those methods are: Using a Unique ID, Using CSS Selectors, and Using Class or Tag Names.</div>
+          </div>
+          <!-- faq-3 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title font-semibold">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content text-sm">Event delegation is the way of attaching a single event listener to a parent element instead of attaching multiple listeners to its individual child elements. Events that "bubble up" from the children are managed by the single listener.</div>
+          </div>
+          <!-- faq-4 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title font-semibold">How do you manipulates an element's attribute and styles using the DOM?</div>
+              <div class="collapse-content text-sm">Element's attributes and styles are manipulated by first selecting the element and then using specific properties and methods to change its HTML attributes or CSS styles. Attributes are values like id, class, src, or href inside an HTML tag. We can get, set, or remove them using dedicated methods.</div>
+          </div>
+         </div>  
+
+    </main>
+
+     <footer class="bg-background h-25 lg:h-40">
+     </footer>
+
+    <script src="/js/toggles.js"></script>
+    <script src="/js/utilities.js"></script>
+    
+</body>
+</html>

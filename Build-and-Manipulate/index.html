@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build and Manipulate</title>
+
+
+<!-- daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>    
+
+    <!-- tailwindcss custom -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+        tailwind.config = {
+            theme: {
+               extend: {
+                   colors: {
+                       clifford: "#da373d",
+                       'btn-primary': '#B4F461',
+                       'background': '#F9F7F3',
+                       'dark': 'rgba(17,17,17,0.7)',
+                       'dark-02': 'rgba(17, 17, 17, 0.05)',
+                       'dark-04': '#212121',
+                       'white-02': '#E9E9E9',
+                   },
+               },
+           },
+       };
+   </script>
+
+
+     <!-- lexend font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+      <style>
+      .lexend-regular {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+      </style>
+
+</head>
+<body class="lexend-regular">
+    <header id="header-conatiner" class="fixed top-0 left-0 w-full z-50 transition-all duration-200">
+        <!-- navbar start -->
+         <div id="nav-container" class="navbar bg-background shadow-sm px-4 md:px-20 lg:px-76 py-8 flex flex-col md:flex-row justify-center items-center">
+
+            <!-- left -->
+            <div class="navbar-start flex justify-center md:justify-start order-2 md:order-1 mt-5 md:mt-0">
+                <button id="btnBlog" data-type="btn-blog" class="btn bg-btn-primary px-8 font-semibold text-xl">Blog</button>
+            </div>
+
+            <!-- center -->
+            <div class="navbar-center flex items-center order-1 md:order-2">
+                <a href=""><img src="/assets/logo.png" alt=""></a>
+                <a class="btn btn-ghost text-xl font-semibold">Donate Bangladesh</a>
+            </div>
+
+            <!-- right -->
+            <div class="navbar-end flex justify-center gap-2 md:justify-end order-1 md:order-3">
+                <img src="/assets/coin.png" alt="">
+                <p id="remainingAmount" class="text-dark">5500</p>
+                <p class="text-dark">BDT</p>
+            </div>
+         </div>
+        <!-- navbar end -->
+         
+        <!-- btn container -->
+         <div class="flex justify-center items-center pt-8 md:pt-16 pb-8 gap-4">
+            <button id="btnDonation" data-type="btn-donation" class="btn btn-lg bg-btn-primary px-8 font-semibold text-xl">Donation</button>
+            <button id="btnHistory" data-type="btn-history" class="btn btn-lg px-8 font-semibold text-xl border text-dark">History</button>
+        </div>
+    </header>
+
+    <main class="pt-[300px] container mx-auto mb-10 lg:mb-20">
+        <!-- cards container -->
+         <div id="donationCards" class="flex flex-col gap-6 items-center">
+            <!-- card 01 -->
+             <div class="lg:mx-40 border-2 border-dark-02 rounded-xl lg:w-[1200px]">
+                <div class="flex flex-col lg:flex-row gap-8 px-6 py-6">
+                    <img src="/assets/noakhali.png"
+                    class="rounded-lg" />
+                    <div class="space-y-4">
+                    <div class="badge badge-lg bg-dark-02 px-6 py-6">
+                        <img class="" src="/assets/coin.png" alt="">
+                        <p id="currentDonation1">500</p>
+                        <p>BDT</p> 
+                    </div>
+                    <h1 id="card-1-donation" class="text-2xl font-bold">Donate for Flood Relief in Noakhali, Bangladesh</h1>
+                    <p class="text-dark">The recent and devastating floods in Noakhali have caused significant damage to homes, infrastructure, and livelihoods, leaving countless families in urgent need of help. As communities face this crisis, your support can provide immediate and life-saving assistance. Your generous donation will help provide essential supplies and aid to those most affected by this disaster.
+                    </p>
+                    <input for="my_modal_7" id="donate1" data-type="donate-1" type="text" placeholder="Write Donation Amount" class="input w-full px-2 border border-dark02-border rounded-lg" />
+                    <button id="btnDonate1" data-type="btn-donate-1" class="btn btn-primary w-full bg-btn-primary rounded-lg font-semibold border-none text-black">Get Started</button> 
+                    </div>
+                </div>
+             </div>
+
+            <!-- card 02 -->
+             <div class="lg:mx-40 border-2 border-dark-02 rounded-xl lg:w-[1200px]">
+                <div class="flex flex-col lg:flex-row gap-8 px-6 py-6">
+                    <img src="/assets/feni.png"
+                    class="rounded-lg" />
+                    <div class="space-y-4">
+                    <div class="badge badge-lg bg-dark-02 px-6 py-6">
+                        <img src="/assets/coin.png" alt="">
+                        <p id="currentDonation2">500</p>
+                        <p>BDT</p> 
+                    </div>
+                    <h1 id="card-2-donation" class="text-2xl font-bold">Stand with Feni in the Face of Devastating Floods</h1>
+                    <p class="text-dark">Catastrophic floods have submerged vast areas of Feni district, leaving a trail of destruction and displacing thousands of families. The relentless deluge has destroyed homes, decimated crops, and washed away livelihoods, plunging the local communities into a state of severe crisis. Immediate assistance is crucial to provide relief to those affected and help them navigate the difficult path to recovery. The recent floods have led to a severe humanitarian crisis in the region. Families have lost their homes and all their belongings, and are in urgent need of basic necessities to survive.
+                    </p>
+                    <input id="donate2" data-type="donate-2" type="text" placeholder="Write Donation Amount" class="input w-full px-2 border border-dark02-border rounded-lg" />
+                    <button id="btnDonate2" data-type="btn-donate-2" class="btn btn-primary w-full bg-btn-primary rounded-lg font-semibold border-none text-black">Get Started</button> 
+                    </div>
+                </div>
+             </div>
+
+            <!-- card 03 -->
+             <div class="lg:mx-40 border-2 border-dark-02 rounded-xl lg:w-[1200px]">
+                <div class="flex flex-col lg:flex-row gap-8 px-6 py-6">
+                    <img src="/assets/quota-protest.png"
+                    class="rounded-lg" />
+                    <div class="space-y-4">
+                    <div class="badge badge-lg bg-dark-02 px-6 py-6">
+                        <img src="/assets/coin.png" alt="">
+                        <p id="currentDonation3">500</p>
+                        <p>BDT</p> 
+                    </div>
+                    <h1 id="card-3-donation" class="text-2xl font-bold">Supporting the Injured of the Bangladesh Student Movement</h1>
+                    <p class="text-dark">A plea for solidarity and support for the thousands injured during the recent student-led Quota Reform Movement in Bangladesh. The movement, which saw a groundswell of support across the nation, has come at a significant cost, with numerous individuals, predominantly students, sustaining serious injuries. As they and their families now face the daunting challenge of recovery, your contribution can provide critical medical assistance and rehabilitation.
+                    </p>
+                    <input id="donate3" data-type="donate-3" type="text" placeholder="Write Donation Amount" class="input w-full px-2 border border-dark02-border rounded-lg" />
+                    <button id="btnDonate3" data-type="btn-donate-3" class="btn btn-primary w-full bg-btn-primary rounded-lg font-semibold border-none text-black">Get Started</button> 
+                    </div>
+                </div>
+             </div>
+         </div>
+
+         <!-- Donation history -->
+          <div id="donationHistory" class="hidden w-[300px] mx-auto lg:w-full h-auto place-items-center ">
+
+          </div>
+            
+          <!-- Opening the Donation Modal modal using ID.showModal() method -->
+            <dialog id="donation_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box text-center space-y-4 w-[340px] mx-auto">
+                    <h3 class="text-4xl font-bold mb-2">Congrats!</h3>
+                    <img src="/assets/coin.png" class="mx-auto w-10 h-10 mb-2" alt="">
+                    <p class="pt-5 font-light">You Have Donated for Humankind</p>
+                    <p class="font-semibold text-lg">Successfully</p>
+                    <div class="modal-action justify-center">
+                        <form method="dialog">
+                            <button class="btn bg-dark-02 p-5 font-semibold text-sm">Close confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+    </main>
+
+    <footer class="bg-background h-25">
+
+    </footer>
+
+
+    <script src="/js/toggles.js"></script>
+    <script src="/js/utilities.js"></script>
+    <script src="/js/donate.js"></script>
+    <script src="/js/currentDonations.js"></script>
+</body>
+</html>
