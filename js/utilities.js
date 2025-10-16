@@ -62,15 +62,15 @@ function blogButtonToAnotherPage(id) {
     } 
     else if (clickDataType === 'btn-home') {
         window.location.href = "index.html";
-        console.log('click handler');
+        console.log('click handler');                                                                     
     }
 }
 
 
-function toHome(){
-    console.log('click handler');
-    return window.location.href='index.html';
-}
+// function toHome(){
+//     console.log('click handler');
+//     return window.location.href='index.html';
+// }
 
 // // donate money
 // function getInput(id){
