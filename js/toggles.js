@@ -58,14 +58,15 @@ const homeBtn = document.getElementById('btnHome');
 if (homeBtn) {
     homeBtn.addEventListener('click', function () {
         blogButtonToAnotherPage('btnHome');
-        console.log('click handler');
+        toHome();
+        // console.log('click handler');
     });
 }
 
 // const getId=document.getElementById('btnHome');
 // if(getId){
 //     getId.addEventListener('click', function(){
-//         console.log('click handler');
+//         // console.log('click handler');
 //         toHome();
 //     });
 // }
