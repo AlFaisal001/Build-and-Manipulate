@@ -58,8 +58,6 @@ const homeBtn = document.getElementById('btnHome');
 if (homeBtn) {
     homeBtn.addEventListener('click', function () {
         blogButtonToAnotherPage('btnHome');
-        toHome();
-        // console.log('click handler');
     });
 }
 
