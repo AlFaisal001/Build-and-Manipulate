@@ -53,20 +53,21 @@ if (blogBtn) {
     });
 }
 
-// home page appearance
-const homeBtn = document.getElementById('btnHome');
-if (homeBtn) {
-    homeBtn.addEventListener('click', function () {
-        blogButtonToAnotherPage('btnHome');
-    });
-}
-
-// const getId=document.getElementById('btnHome');
-// if(getId){
-//     getId.addEventListener('click', function(){
-//         // console.log('click handler');
-//         toHome();
+// // home page appearance
+// const homeBtn = document.getElementById('btnHome');
+// if (homeBtn) {
+//     homeBtn.addEventListener('click', function () {
+//         blogButtonToAnotherPage('btnHome');
 //     });
 // }
+
+// home page appearance
+const getId=document.getElementById('btnHome');
+if(getId){
+    getId.addEventListener('click', function(){
+        // console.log('click handler');
+        toHome();
+    });
+}
     
 

@@ -61,18 +61,18 @@ function blogButtonToAnotherPage(id) {
         // window.location.href = "faq.html";
         window.location.assign('./faq.html')
     } 
-    else if (clickDataType === 'btn-home') {
-        // window.location.href = "index.html";
-        window.location.assign('./index.html');                                                                   
-    }
+    // else if (clickDataType === 'btn-home') {
+    //     // window.location.href = "index.html";
+    //     window.location.assign('./index.html');                                                                   
+    // }
 }
 
 
-// function toHome(){
-//     // console.log('click handler');
-//     // return window.location.href='index.html';
-//     window.location.assign('./index.html');
-// }
+function toHome(){
+    // console.log('click handler');
+    // return window.location.href='index.html';
+    window.location.assign('./index.html');
+}
 
 // // donate money
 // function getInput(id){
